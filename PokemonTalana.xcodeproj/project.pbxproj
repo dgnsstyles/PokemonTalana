@@ -6,6 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C12F8D892F2C1DD600B1A6A8 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = C12F8D882F2C1DD600B1A6A8 /* FirebaseAI */; };
+		C12F8D8B2F2C1DD600B1A6A8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C12F8D8A2F2C1DD600B1A6A8 /* FirebaseAuth */; };
+		C12F8D8D2F2C1DD600B1A6A8 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C12F8D8C2F2C1DD600B1A6A8 /* FirebaseAuthCombine-Community */; };
+		C12F8D8F2F2C1DD600B1A6A8 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = C12F8D8E2F2C1DD600B1A6A8 /* FirebaseCore */; };
+		C12F8D912F2C1DD600B1A6A8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C12F8D902F2C1DD600B1A6A8 /* FirebaseDatabase */; };
+		C12F8D932F2C1DD600B1A6A8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C12F8D922F2C1DD600B1A6A8 /* FirebaseFirestore */; };
+		C12F8D952F2C1DD600B1A6A8 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C12F8D942F2C1DD600B1A6A8 /* FirebaseFirestoreCombine-Community */; };
+		C12F8DA02F2C236000B1A6A8 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C12F8D9F2F2C236000B1A6A8 /* GoogleSignIn */; };
+		C12F8DA22F2C236000B1A6A8 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C12F8DA12F2C236000B1A6A8 /* GoogleSignInSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C142DBE42F2BEFCD0026C56F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +41,30 @@
 		C142DBED2F2BEFCD0026C56F /* PokemonTalanaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonTalanaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C12F8D9A2F2C201B00B1A6A8 /* Exceptions for "PokemonTalana" folder in "PokemonTalanaTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = C142DBE22F2BEFCD0026C56F /* PokemonTalanaTests */;
+		};
+		C12F8D9B2F2C201B00B1A6A8 /* Exceptions for "PokemonTalana" folder in "PokemonTalanaUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = C142DBEC2F2BEFCD0026C56F /* PokemonTalanaUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C142DBD62F2BEFCB0026C56F /* PokemonTalana */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C12F8D9A2F2C201B00B1A6A8 /* Exceptions for "PokemonTalana" folder in "PokemonTalanaTests" target */,
+				C12F8D9B2F2C201B00B1A6A8 /* Exceptions for "PokemonTalana" folder in "PokemonTalanaUITests" target */,
+			);
 			path = PokemonTalana;
 			sourceTree = "<group>";
 		};
@@ -52,6 +85,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12F8DA22F2C236000B1A6A8 /* GoogleSignInSwift in Frameworks */,
+				C12F8D912F2C1DD600B1A6A8 /* FirebaseDatabase in Frameworks */,
+				C12F8DA02F2C236000B1A6A8 /* GoogleSignIn in Frameworks */,
+				C12F8D892F2C1DD600B1A6A8 /* FirebaseAI in Frameworks */,
+				C12F8D8D2F2C1DD600B1A6A8 /* FirebaseAuthCombine-Community in Frameworks */,
+				C12F8D8F2F2C1DD600B1A6A8 /* FirebaseCore in Frameworks */,
+				C12F8D8B2F2C1DD600B1A6A8 /* FirebaseAuth in Frameworks */,
+				C12F8D932F2C1DD600B1A6A8 /* FirebaseFirestore in Frameworks */,
+				C12F8D952F2C1DD600B1A6A8 /* FirebaseFirestoreCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +154,15 @@
 			);
 			name = PokemonTalana;
 			packageProductDependencies = (
+				C12F8D882F2C1DD600B1A6A8 /* FirebaseAI */,
+				C12F8D8A2F2C1DD600B1A6A8 /* FirebaseAuth */,
+				C12F8D8C2F2C1DD600B1A6A8 /* FirebaseAuthCombine-Community */,
+				C12F8D8E2F2C1DD600B1A6A8 /* FirebaseCore */,
+				C12F8D902F2C1DD600B1A6A8 /* FirebaseDatabase */,
+				C12F8D922F2C1DD600B1A6A8 /* FirebaseFirestore */,
+				C12F8D942F2C1DD600B1A6A8 /* FirebaseFirestoreCombine-Community */,
+				C12F8D9F2F2C236000B1A6A8 /* GoogleSignIn */,
+				C12F8DA12F2C236000B1A6A8 /* GoogleSignInSwift */,
 			);
 			productName = PokemonTalana;
 			productReference = C142DBD42F2BEFCB0026C56F /* PokemonTalana.app */;
@@ -195,6 +246,10 @@
 			);
 			mainGroup = C142DBCB2F2BEFCB0026C56F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C12F8D872F2C1DD500B1A6A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C12F8D9E2F2C236000B1A6A8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C142DBD52F2BEFCB0026C56F /* Products */;
 			projectDirPath = "";
@@ -578,6 +633,73 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C12F8D872F2C1DD500B1A6A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
+		C12F8D9E2F2C236000B1A6A8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C12F8D882F2C1DD600B1A6A8 /* FirebaseAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12F8D872F2C1DD500B1A6A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAI;
+		};
+		C12F8D8A2F2C1DD600B1A6A8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12F8D872F2C1DD500B1A6A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C12F8D8C2F2C1DD600B1A6A8 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12F8D872F2C1DD500B1A6A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		C12F8D8E2F2C1DD600B1A6A8 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12F8D872F2C1DD500B1A6A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		C12F8D902F2C1DD600B1A6A8 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12F8D872F2C1DD500B1A6A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		C12F8D922F2C1DD600B1A6A8 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12F8D872F2C1DD500B1A6A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C12F8D942F2C1DD600B1A6A8 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12F8D872F2C1DD500B1A6A8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		C12F8D9F2F2C236000B1A6A8 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12F8D9E2F2C236000B1A6A8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		C12F8DA12F2C236000B1A6A8 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C12F8D9E2F2C236000B1A6A8 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C142DBCC2F2BEFCB0026C56F /* Project object */;
 }

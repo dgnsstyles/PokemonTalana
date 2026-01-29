@@ -1,5 +1,5 @@
 //
-//  repo.swift
+//  PokemonRepositoryImpl.swift
 //  PokemonTalana
 //
 //  Created by David Goren on 29-01-26.
@@ -36,12 +36,13 @@ class PokemonRepositoryImpl: PokemonRepository {
             .eraseToAnyPublisher()
     }
     
-    func searchPokemon(query: String) -> AnyPublisher<[Pokemon], Error> {
-        let endpoint = Endpoints.pokemonByName(name: query.lowercased())
+    func getPokemonByName(name: String) -> AnyPublisher<Pokemon, Error> {
+        let endpoint = Endpoints.pokemonByName(name: name.lowercased())
         
         return apiClient.request(endpoint: endpoint)
             .map { (response: PokemonDetailResponse) in
-                [Pokemon(id: response.id, name: response.name, url: "")]
+                let pokemonURL = "\(Endpoints.baseURL)/pokemon/\(response.id)/"
+                return Pokemon(id: response.id, name: response.name, url: pokemonURL)
             }
             .eraseToAnyPublisher()
     }

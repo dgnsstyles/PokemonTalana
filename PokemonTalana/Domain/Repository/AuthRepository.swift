@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol AuthRepository {
+    func saveUser(username: String, password: String) -> Bool
+    func getUser() -> User?
+    func validateUser(username: String, password: String) -> Bool
+    func isUserLoggedIn() -> Bool
+    func logout()
+}

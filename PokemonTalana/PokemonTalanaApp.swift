@@ -7,12 +7,31 @@
 
 import SwiftUI
 import SwiftData
+import FirebaseCore
+import GoogleSignIn
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+
+    return true
+  }
+
+  func application(_ app: UIApplication,
+                   open url: URL,
+                   options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+    return GIDSignIn.sharedInstance.handle(url)
+  }
+}
 
 @main
 struct PokemonTalanaApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
+            FavoritePokemon.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,8 +44,10 @@ struct PokemonTalanaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+                    LoginView(
+                        viewModel: DependencyContainer.shared.makeLoginViewModel()
+                    )
+                }
         .modelContainer(sharedModelContainer)
     }
 }
