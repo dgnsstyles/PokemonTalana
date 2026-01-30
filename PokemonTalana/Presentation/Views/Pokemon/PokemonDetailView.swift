@@ -76,6 +76,7 @@ struct PokemonDetailView: View {
                 .background(Color.black.opacity(0.2))
                 .clipShape(Circle())
         }
+        .accessibilityIdentifier(AccessibilityIdentifiers.favoriteStarButton)
         .padding()
     }
     
@@ -90,6 +91,7 @@ struct PokemonDetailView: View {
                 .background(Color.black.opacity(0.2))
                 .clipShape(Circle())
         }
+        .accessibilityIdentifier(AccessibilityIdentifiers.backButton)
         .padding()
     }
     
@@ -99,6 +101,7 @@ struct PokemonDetailView: View {
                 Text(pokemon.name.capitalized)
                     .font(.system(size: 32, weight: .bold))
                     .foregroundColor(.white)
+                    .accessibilityIdentifier(AccessibilityIdentifiers.pokemonDetailName)
                 
                 Spacer()
                 
@@ -106,6 +109,7 @@ struct PokemonDetailView: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.white.opacity(0.8))
+                    .accessibilityIdentifier(AccessibilityIdentifiers.pokemonDetailID)
             }
             .padding(.horizontal)
             .padding(.top, 60)

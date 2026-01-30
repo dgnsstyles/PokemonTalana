@@ -43,14 +43,17 @@ struct LoginView: View {
                     TextField("Username", text: $viewModel.username)
                         .textFieldStyle(CustomTextFieldStyle())
                         .autocapitalization(.none)
+                        .accessibilityIdentifier(AccessibilityIdentifiers.loginUsernameField)
                     
                     SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(CustomTextFieldStyle())
+                        .accessibilityIdentifier(AccessibilityIdentifiers.loginPasswordField)
                     
                     if let error = viewModel.errorMessage {
                         Text(error)
                             .foregroundColor(.red)
                             .font(.caption)
+                            .accessibilityIdentifier(AccessibilityIdentifiers.errorMessage)
                     }
                     
                     Button(action: {
@@ -68,6 +71,7 @@ struct LoginView: View {
                             .background(Color.blue)
                             .cornerRadius(12)
                     }
+                    .accessibilityIdentifier(isRegisterMode ? AccessibilityIdentifiers.registerButton : AccessibilityIdentifiers.loginButton)
                     
                     Button(action: {
                         isRegisterMode.toggle()

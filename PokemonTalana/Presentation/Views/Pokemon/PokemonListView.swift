@@ -34,6 +34,7 @@ struct PokemonListView: View {
                                     PokemonCardView(pokemon: pokemon)
                                 }
                                 .buttonStyle(PlainButtonStyle())
+                                .accessibilityIdentifier("\(AccessibilityIdentifiers.pokemonCard)\(pokemon.id)")
                                 .onAppear {
                                     viewModel.loadMoreIfNeeded(currentPokemon: pokemon)
                                 }
@@ -47,6 +48,7 @@ struct PokemonListView: View {
                         .padding(.horizontal)
                         .padding(.top, 8)
                     }
+                    .accessibilityIdentifier(AccessibilityIdentifiers.pokemonList)
                 }
             }
             .navigationBarHidden(true)
@@ -63,6 +65,7 @@ struct PokemonListView: View {
                 Text("\(viewModel.pokemons.count) Pokémon")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
+                    .accessibilityIdentifier(AccessibilityIdentifiers.pokemonListTitle)
             }
             
             Spacer()
@@ -82,6 +85,7 @@ struct PokemonListView: View {
             
             TextField("Search Pokémon", text: $searchText)
                 .textFieldStyle(PlainTextFieldStyle())
+                .accessibilityIdentifier(AccessibilityIdentifiers.searchField)
             
             if !searchText.isEmpty {
                 Button(action: {
